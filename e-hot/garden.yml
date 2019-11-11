@@ -1,0 +1,18 @@
+kind: Module
+type: container
+name: e
+services:
+  - name: e
+    ports:
+      - name: http
+        containerPort: 8080
+    ingresses:
+      - path: /e
+        port: http
+    limits:
+      # cpu: 1000
+      cpu: 500
+hotReload:
+  sync:
+    - target: /app/
+      source: src/

@@ -1,0 +1,16 @@
+kind: Module
+type: container
+name: f
+services:
+  - name: f
+    ports:
+      - name: http
+        containerPort: 8080
+    ingresses:
+      - path: /f
+        port: http
+hotReload:
+  sync:
+    - target: /app/
+      source: bin/
+

@@ -1,0 +1,11 @@
+kind: Module
+name: b
+type: container
+services:
+  - name: b
+    ports:
+      - name: http
+        containerPort: 8080
+    ingresses:
+      - path: /b
+        port: http

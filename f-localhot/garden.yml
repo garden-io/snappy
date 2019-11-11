@@ -1,0 +1,5 @@
+kind: Module
+type: exec
+name: f-build
+build:
+  command: ["/bin/sh", "build.sh"]
